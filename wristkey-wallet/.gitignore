@@ -1,0 +1,18 @@
+# Node
+node_modules/
+.npm
+npm-debug.log*
+
+# Build output
+/dist/
+/.vite/
+*.local
+
+# Env
+.env
+.env.local
+
+# OS/Editor
+.DS_Store
+.vscode/
+.idea/
