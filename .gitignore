@@ -1,0 +1,28 @@
+# OS
+.DS_Store
+
+# Secrets
+**/.env
+
+# Node
+node_modules/
+**/node_modules/
+
+# Builds
+**/dist/
+**/build/
+
+# Redis snapshot
+dump.rdb
+*.rdb
+
+# Local test ledger/validators
+test-ledger/
+
+# Logs
+*.log
+**/*.log
+
+# Misc
+*.local
+*.cache
