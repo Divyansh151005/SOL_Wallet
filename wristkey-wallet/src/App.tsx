@@ -434,6 +434,19 @@ function App() {
           )}
         </div>
       </div>
+
+      {/* Bottom-only CTA (appears when scrolled to bottom since it’s in normal flow) */}
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <a
+          className="donate-cta"
+          href={`https://explorer.solana.com/address/5JoUMnajtdG3tuLP7yocp2u4oTJ4ihV8AdNkENoveVfP?cluster=devnet`}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Solana Donations"
+        >
+          Solana Donations
+        </a>
+      </div>
     </div>
   )
 }
