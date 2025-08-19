@@ -138,3 +138,6 @@ echo "- Test Wallet: $PUBLIC_KEY"
 echo "- JWT Token: ${JWT_TOKEN:0:20}..."
 echo "- Airdrop Job: $JOB_ID"
 echo "- Send Job: $SEND_JOB_ID"
+
+
+

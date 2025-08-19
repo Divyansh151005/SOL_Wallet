@@ -9,7 +9,8 @@
   --danger: #ff6b6b;
 }
 
-html, body, #root { height: 100%; }
+/* Let the background extend with content while ensuring full-viewport minimum */
+html, body, #root { min-height: 100%; }
 
 html { font-size: 17px; }
 @media (min-width: 1200px) { html { font-size: 19px; } }
@@ -19,6 +20,9 @@ body {
   background: radial-gradient(1400px 600px at 10% -10%, rgba(20, 241, 149, 0.16), transparent 60%),
               radial-gradient(1200px 700px at 120% -10%, rgba(153, 69, 255, 0.14), transparent 60%),
               var(--bg);
+  /* Prevent background from "ending" on mobile bounce; keep color consistent */
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   color: var(--text);
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans,
     Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
@@ -86,3 +90,24 @@ body {
 .warn { color: var(--danger); font-size: 1rem; }
 .link { color: #a8c7ff; text-decoration: none; }
 .link:hover { text-decoration: underline; }
+
+/* Fixed bottom-center Solana donation CTA */
+.donate-cta {
+  position: static; /* in-document flow so it appears only at the bottom */
+  display: inline-block;
+  margin: 48px auto 24px auto; /* center horizontally at the bottom */
+  align-items: center;
+  gap: 10px;
+  padding: 16px 22px;
+  border-radius: 16px;
+  background: linear-gradient(90deg, var(--brand), var(--brand-2));
+  color: #061018;
+  font-weight: 900;
+  font-size: 1.05rem;
+  text-decoration: none;
+  box-shadow: 0 12px 34px rgba(0,0,0,0.38);
+  border: 1px solid rgba(255,255,255,0.10);
+  z-index: 50;
+}
+.donate-cta:hover { filter: brightness(1.05); }
+.donate-cta:active { transform: translateY(1px); }
